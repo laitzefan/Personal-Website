@@ -1,2 +1,3 @@
 # Personal-Website
-https://laitzefan.wordpress.com/
+Main website: https://laitzefan.wordpress.com/
+<br>Twitter: @lychee_fan
