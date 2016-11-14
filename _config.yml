@@ -1,1 +1,3 @@
 gems: [jekyll-coffeescript, jekyll-watch, jekyll-assets]
+
+gem install jekyll-coffeescript jekyll-watch jekyll-assets
