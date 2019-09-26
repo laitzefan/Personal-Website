@@ -1,0 +1,122 @@
+# Basics
+Italicize: i>YOUR TEXT HERE/i>
+Bold: i>YOUR TEXT HERE/b>
+Underline: i>YOUR TEXT HERE/u>
+
+
+<hr />
+
+
+# Change Appearance of Entire Project
+body, tw-story {
+  font-family: Comic Sans ms;
+  font-size: 12px;
+  color: green;
+  background-color: orange;
+}
+
+
+# Change Appearance of One Passage
+Add "SOMEWORD" as a tag in the Passage
+
+Copy + paste into CSS Stylesheet:
+
+.SOMEWORD {
+background-color: pink;
+color: cornflowerblue;
+font-size: 200%;
+}
+
+
+# Change link color
+tw-link[tags="title"] {
+  color: #17174F;
+}
+
+tw-link:hover, .enchantment-link:hover[tags="title"] {
+    color: #810541;
+}
+
+
+<hr />
+
+
+
+# Image and Video code
+img src="YOUR URL HERE">
+video src="YOUR URL HERE" autoplay>
+For YouTube and Vimeo, use their own embed style.
+
+
+# Links 
+a href="YOUR URL HERE">TEXT THAT PEOPLE WILL SEE/a>
+
+
+
+<b>Image as Link to Passage</b>
+[[img src="YOUR URL HERE">->Marble Slab]]
+
+
+<b>Hide Sidebar</b>
+#ui-bar {
+ display: none;
+}
+
+
+<b>Disappearing Text</b>
+div class="disappear">YOUR TEXT HERE/div>
+
+<i>+ CSS Stylesheet:</i>
+.disappear:hover {
+ opacity: 0;
+ transition: 1s all ease;
+}
+
+
+
+<b>Columns in passages</b>
+div class="twocolumn"><font face="Century Gothic" size="2">
+YOUR TEXT HERE
+/div>
+
+
+<b>Timed text</b>
+<font face="Century Gothic" size="5">(set: _title to (text-style:'outline')) _title[Infinitesimal Calculus]
+<font size="3">|date)[<i>July 24, 2018</i>]
+{(live: 3s)[
+	(show: ?date)
+	(stop:)
+	]}
+|one)[ [Ghosts of departed quantities]<ghosts| (click: ?ghosts)[<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/The_Analyst%3B_or%2C_a_Discourse_Addressed_to_an_Infidel_Mathematician.djvu/page69-1024px-The_Analyst%3B_or%2C_a_Discourse_Addressed_to_an_Infidel_Mathematician.djvu.jpg" width="275px" height="500px">] ]
+|two)[Spectres of multi-deduction]
+|three)[The vacuum envelops the equation]
+|four)[All that was is now none]
+
+|five)[All that which was expontential]
+|six)[--one hundred kisses, one hundred and two]
+|seven)[One plus one was as zero]
+|eight)[One plus one [was as zero]Duplicate]] in mirrors]
+|ten)[All their refractions that were obtuse]
+|eleven)[One times zero is still zero]
+|twelve)[The mouth opens up to swallow]
+
+|thirteen)[But remember to calculate the [summit]Eraser]] the notes]
+|nineteen)[Now comes the infinitesimal calculus ...]
+|twenty)[You cannot divide by zero.]
+
+{(live: 5s)[
+	(show: ?one)
+	(stop:)
+	]}
+{(live: 7s)[
+	(show: ?two)
+	(stop:)
+	]}
+{(live: 9s)[
+	(show: ?three)
+	(stop:)
+	]}
+{(live: 11s)[
+	(show: ?four)
+	(stop:)
+	]}
