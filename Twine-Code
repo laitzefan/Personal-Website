@@ -1,10 +1,7 @@
 # Basics
-Italicize: i>YOUR TEXT HERE/i>
-Bold: i>YOUR TEXT HERE/b>
-Underline: i>YOUR TEXT HERE/u>
-
-
-<hr />
+Italicize: <i>YOUR TEXT HERE/i>
+Bold: <i>YOUR TEXT HERE/b>
+Underline: <i>YOUR TEXT HERE/u>
 
 
 # Change Appearance of Entire Project
@@ -28,7 +25,13 @@ font-size: 200%;
 }
 
 
-# Change link color
+# Change Text Alignment
+<p align="center">YOUR TEXT HERE</p>
+<p align="right">YOUR TEXT HERE</p>
+<p align="left">YOUR TEXT HERE</p>
+
+
+# Change Link Color
 tw-link[tags="title"] {
   color: #17174F;
 }
@@ -38,71 +41,52 @@ tw-link:hover, .enchantment-link:hover[tags="title"] {
 }
 
 
-<hr />
-
-
-
 # Image and Video code
-img src="YOUR URL HERE">
-video src="YOUR URL HERE" autoplay>
+<img src="YOUR URL HERE">
+<video src="YOUR URL HERE" autoplay>
 For YouTube and Vimeo, use their own embed style.
 
 
 # Links 
-a href="YOUR URL HERE">TEXT THAT PEOPLE WILL SEE/a>
+<a href="YOUR URL HERE">TEXT THAT PEOPLE WILL SEE/a>
 
 
 
-<b>Image as Link to Passage</b>
-[[img src="YOUR URL HERE">->Marble Slab]]
+# Image as Link to Passage
+[[img src="YOUR URL HERE">->NAME OF PASSAGE]]
 
 
-<b>Hide Sidebar</b>
+# Hide Sidebar
 #ui-bar {
  display: none;
 }
 
 
-<b>Disappearing Text</b>
-div class="disappear">YOUR TEXT HERE/div>
+# Disappearing Text
+<div class="disappear">YOUR TEXT HERE</div>
 
-<i>+ CSS Stylesheet:</i>
+Add to CSS Stylesheet:
 .disappear:hover {
  opacity: 0;
  transition: 1s all ease;
 }
 
 
-
-<b>Columns in passages</b>
-div class="twocolumn"><font face="Century Gothic" size="2">
-YOUR TEXT HERE
-/div>
+# Reveal Text
+[YOUR TEXT HERE]<nameoflink| (click: ?nameoflink)[<img src="IMAGE URL HERE" width="275px" height="500px">]
 
 
-<b>Timed text</b>
-<font face="Century Gothic" size="5">(set: _title to (text-style:'outline')) _title[Infinitesimal Calculus]
-<font size="3">|date)[<i>July 24, 2018</i>]
-{(live: 3s)[
-	(show: ?date)
-	(stop:)
-	]}
-|one)[ [Ghosts of departed quantities]<ghosts| (click: ?ghosts)[<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/The_Analyst%3B_or%2C_a_Discourse_Addressed_to_an_Infidel_Mathematician.djvu/page69-1024px-The_Analyst%3B_or%2C_a_Discourse_Addressed_to_an_Infidel_Mathematician.djvu.jpg" width="275px" height="500px">] ]
-|two)[Spectres of multi-deduction]
-|three)[The vacuum envelops the equation]
-|four)[All that was is now none]
+# Columns in passages
+<div class="twocolumn"><font face="Century Gothic" size="2">YOUR TEXT HERE</div>
 
-|five)[All that which was expontential]
-|six)[--one hundred kisses, one hundred and two]
-|seven)[One plus one was as zero]
-|eight)[One plus one [was as zero]Duplicate]] in mirrors]
-|ten)[All their refractions that were obtuse]
-|eleven)[One times zero is still zero]
-|twelve)[The mouth opens up to swallow]
 
-|thirteen)[But remember to calculate the [summit]Eraser]] the notes]
-|nineteen)[Now comes the infinitesimal calculus ...]
-|twenty)[You cannot divide by zero.]
+# Timed text
+<font face="Century Gothic" size="5">
+(set: _title to (text-style:'outline')) _titleTITLEOFYOURTEXT
+
+|one)[ [SAMPLE TEXT ONE]<nameoflink| (click: ?nameoflink)[<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/The_Analyst%3B_or%2C_a_Discourse_Addressed_to_an_Infidel_Mathematician.djvu/page69-1024px-The_Analyst%3B_or%2C_a_Discourse_Addressed_to_an_Infidel_Mathematician.djvu.jpg" width="275px" height="500px">] ]
+|two)[SAMPLE TEXT TWO]
+|three)[SAMPLE TEXT THREE]
 
 {(live: 5s)[
 	(show: ?one)
@@ -114,9 +98,5 @@ YOUR TEXT HERE
 	]}
 {(live: 9s)[
 	(show: ?three)
-	(stop:)
-	]}
-{(live: 11s)[
-	(show: ?four)
 	(stop:)
 	]}
