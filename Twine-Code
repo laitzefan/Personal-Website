@@ -4,6 +4,8 @@ Bold: <i>YOUR TEXT HERE/b>
 Underline: <i>YOUR TEXT HERE/u>
 
 
+
+
 # Change Appearance of Entire Project
 body, tw-story {
   font-family: Comic Sans ms;
@@ -11,6 +13,8 @@ body, tw-story {
   color: green;
   background-color: orange;
 }
+
+
 
 
 # Change Appearance of One Passage
@@ -25,10 +29,14 @@ font-size: 200%;
 }
 
 
+
+
 # Change Text Alignment
 <p align="center">YOUR TEXT HERE</p>
 <p align="right">YOUR TEXT HERE</p>
 <p align="left">YOUR TEXT HERE</p>
+
+
 
 
 # Change Link Color
@@ -41,10 +49,14 @@ tw-link:hover, .enchantment-link:hover[tags="title"] {
 }
 
 
+
+
 # Image and Video code
 <img src="YOUR URL HERE">
 <video src="YOUR URL HERE" autoplay>
 For YouTube and Vimeo, use their own embed style.
+
+
 
 
 # Links 
@@ -52,14 +64,20 @@ For YouTube and Vimeo, use their own embed style.
 
 
 
+
+
 # Image as Link to Passage
 [[img src="YOUR URL HERE">->NAME OF PASSAGE]]
+
+
 
 
 # Hide Sidebar
 #ui-bar {
  display: none;
 }
+
+
 
 
 # Disappearing Text
@@ -72,15 +90,44 @@ Add to CSS Stylesheet:
 }
 
 
+
+
 # Reveal Text
 [YOUR TEXT HERE]<nameoflink| (click: ?nameoflink)[<img src="IMAGE URL HERE" width="275px" height="500px">]
 
 
-# Columns in passages
+
+
+# Text Styles
+YOUR TEXT (text-style: "STYLE HERE")[YOUR STYLED TEXT] YOUR TEXT
+See all styles here: https://twinery.org/wiki/harlowe:text-style
+
+
+
+
+# Columns in Passages
 <div class="twocolumn"><font face="Century Gothic" size="2">YOUR TEXT HERE</div>
 
 
-# Timed text
+
+
+# Either/Or
+The referee reveals that the coin is (either:"heads","tails").
+
+
+# Replace Choices
+You enter a room and choose:
+
+|links>[\
+(link: "stone ornament")[(replace: ?links)[stone ornament]]
+(link: "child's painting")[(replace: ?links)[child's painting]]
+(link: "small wooden box")[(replace: ?links)[small wooden box]]\
+]
+
+
+
+
+# Timed Text
 <font face="Century Gothic" size="5">
 (set: _title to (text-style:'outline')) _titleTITLEOFYOURTEXT
 
@@ -100,3 +147,34 @@ Add to CSS Stylesheet:
 	(show: ?three)
 	(stop:)
 	]}
+
+
+
+
+
+# Score Keeper
+To declare:
+(set:$counter to 1)
+
+To increase with a correct answer:
+(set:$counter to ($counter + 1))
+
+Then when you check, just have final text that is set according to the number of correct answers:
+
+(if:$num_correct is 8)[(set:$result to "Aced it!")]
+
+Et cetera...
+
+Then in your results passage, just display $result.
+
+
+
+
+# Strength Increase
+(set: $strength to 10)
+If you want the player's strength to change when clicking on links, you could do this,
+
+(link: "You spend a couple hours doing heavy farm work.")[
+	(set: $strength to it + 1)
+	(go-to: "Go back to town.")
+]
