@@ -1,4 +1,5 @@
 # Basics
+Passage:
 Italicize: <i>YOUR TEXT HERE/i>
 Bold: <i>YOUR TEXT HERE/b>
 Underline: <i>YOUR TEXT HERE/u>
@@ -7,6 +8,7 @@ Underline: <i>YOUR TEXT HERE/u>
 
 
 # Change Appearance of Entire Project
+Stylesheet:
 body, tw-story {
   font-family: Comic Sans ms;
   font-size: 12px;
@@ -18,10 +20,10 @@ body, tw-story {
 
 
 # Change Appearance of One Passage
+Passage:
 Add "SOMEWORD" as a tag in the Passage
 
-Copy + paste into CSS Stylesheet:
-
+Stylesheet:
 .SOMEWORD {
 background-color: pink;
 color: cornflowerblue;
@@ -32,6 +34,7 @@ font-size: 200%;
 
 
 # Change Text Alignment
+Passage:
 <p align="center">YOUR TEXT HERE</p>
 <p align="right">YOUR TEXT HERE</p>
 <p align="left">YOUR TEXT HERE</p>
@@ -40,6 +43,7 @@ font-size: 200%;
 
 
 # Change Link Color
+Stylesheet:
 tw-link[tags="title"] {
   color: #17174F;
 }
@@ -52,6 +56,7 @@ tw-link:hover, .enchantment-link:hover[tags="title"] {
 
 
 # Image and Video code
+Passage:
 <img src="YOUR URL HERE">
 <video src="YOUR URL HERE" autoplay>
 For YouTube and Vimeo, use their own embed style.
@@ -59,7 +64,8 @@ For YouTube and Vimeo, use their own embed style.
 
 
 
-# Links 
+# Links
+Passage:
 <a href="YOUR URL HERE">TEXT THAT PEOPLE WILL SEE/a>
 
 
@@ -67,23 +73,18 @@ For YouTube and Vimeo, use their own embed style.
 
 
 # Image as Link to Passage
+Passage:
 [[img src="YOUR URL HERE">->NAME OF PASSAGE]]
 
 
 
 
-# Hide Sidebar
-#ui-bar {
- display: none;
-}
-
-
-
 
 # Disappearing Text
+Passage:
 <div class="disappear">YOUR TEXT HERE</div>
 
-Add to CSS Stylesheet:
+Stylesheet:
 .disappear:hover {
  opacity: 0;
  transition: 1s all ease;
@@ -92,27 +93,33 @@ Add to CSS Stylesheet:
 
 
 
-# Reveal Text
-[YOUR TEXT HERE]<nameoflink| (click: ?nameoflink)[<img src="IMAGE URL HERE" width="275px" height="500px">]
-
-
-
-
 # Text Styles
-YOUR TEXT (text-style: "STYLE HERE")[YOUR STYLED TEXT] YOUR TEXT
 See all styles here: https://twinery.org/wiki/harlowe:text-style
+Passage:
+YOUR TEXT (text-style: "STYLE HERE")[YOUR STYLED TEXT] YOUR TEXT
 
 
 
 
-# Columns in Passages
+
+# Columns
+Passage:
 <div class="twocolumn"><font face="Century Gothic" size="2">YOUR TEXT HERE</div>
 
 
 
 
+# Reveal Text or Image
+[YOUR TEXT HERE]<nameoflink| (click: ?nameoflink)[<img src="IMAGE URL HERE" width="275px" height="500px">]
+
+
+
+
 # Either/Or
-The referee reveals that the coin is (either:"heads","tails").
+The referee reveals that the coin is (either: "heads","tails").
+
+
+
 
 
 # Replace Choices
@@ -128,9 +135,6 @@ You enter a room and choose:
 
 
 # Timed Text
-<font face="Century Gothic" size="5">
-(set: _title to (text-style:'outline')) _titleTITLEOFYOURTEXT
-
 |one)[ [SAMPLE TEXT ONE]<nameoflink| (click: ?nameoflink)[<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/The_Analyst%3B_or%2C_a_Discourse_Addressed_to_an_Infidel_Mathematician.djvu/page69-1024px-The_Analyst%3B_or%2C_a_Discourse_Addressed_to_an_Infidel_Mathematician.djvu.jpg" width="275px" height="500px">] ]
 |two)[SAMPLE TEXT TWO]
 |three)[SAMPLE TEXT THREE]
@@ -147,8 +151,32 @@ You enter a room and choose:
 	(show: ?three)
 	(stop:)
 	]}
+	
+	
+OR
 
 
+(live: 0s)[In]
+(live: 4s)[Out]
+(live: 8s)[In]
+(live: 12s)[Out]
+(live: 16s)[In]
+(live: 20s)[Out]
+
+
+
+
+
+# Make Text Disappear After Time
+Passage:
+|SECTIONNAME)[SAMPLE TEXT]
+
+{(live: 1s)[
+	(show: ?SECTIONNAME)
+	(stop:)]}
+{(live: 5s)[
+	(replace: ?SECTIONNAME)[]
+	(stop:)]}
 
 
 
@@ -166,6 +194,15 @@ Then when you check, just have final text that is set according to the number of
 Et cetera...
 
 Then in your results passage, just display $result.
+
+
+
+
+# Surprise Noise
+Passage:
+{(live: 0.5s)[
+    (either: "Bang!", "Kaboom!", "Whammo!", "Pow!")
+]}
 
 
 
