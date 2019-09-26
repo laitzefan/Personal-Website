@@ -109,13 +109,43 @@ Passage:
 
 
 
-# Reveal Text or Image
+# Click to Reveal Text or Image
+Passage:
 [YOUR TEXT HERE]<nameoflink| (click: ?nameoflink)[<img src="IMAGE URL HERE" width="275px" height="500px">]
 
 
 
 
+# Hover to Reveal Invisible Text
+Passage:
+(hover-style:(text-color:cyan) + (css: "opacity:10")) + (css: "opacity:0") [YOUR TEXT HERE]
+
+
+
+
+# Hover to Make Text Disappear
+Passage:
+(hover-style:(text-color:cyan) + (css: "opacity:0")) [YOUR TEXT HERE]
+
+
+
+
+# Hover to Rotate Text
+Passage:
+(hover-style:(text-rotate:15) + (css: "font-size: 200%")) [YOUR TEXT HERE]
+
+
+
+
+# Hover to Decrease (> 100%) or Increase (< 100%) Size
+Passage:
+(hover-style: (css: "font-size: 200%")) [YOUR TEXT HERE]
+
+
+
+
 # Either/Or
+Passage:
 The referee reveals that the coin is (either: "heads","tails").
 
 
@@ -123,6 +153,7 @@ The referee reveals that the coin is (either: "heads","tails").
 
 
 # Replace Choices
+Passage:
 You enter a room and choose:
 
 |links>[\
@@ -135,7 +166,8 @@ You enter a room and choose:
 
 
 # Timed Text
-|one)[ [SAMPLE TEXT ONE]<nameoflink| (click: ?nameoflink)[<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/The_Analyst%3B_or%2C_a_Discourse_Addressed_to_an_Infidel_Mathematician.djvu/page69-1024px-The_Analyst%3B_or%2C_a_Discourse_Addressed_to_an_Infidel_Mathematician.djvu.jpg" width="275px" height="500px">] ]
+Passage:
+|one)[[SAMPLE TEXT ONE]<nameoflink| (click: ?nameoflink)[<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/The_Analyst%3B_or%2C_a_Discourse_Addressed_to_an_Infidel_Mathematician.djvu/page69-1024px-The_Analyst%3B_or%2C_a_Discourse_Addressed_to_an_Infidel_Mathematician.djvu.jpg" width="275px" height="500px">] ]
 |two)[SAMPLE TEXT TWO]
 |three)[SAMPLE TEXT THREE]
 
@@ -181,6 +213,7 @@ Passage:
 
 
 # Score Keeper
+Passage:
 To declare:
 (set:$counter to 1)
 
