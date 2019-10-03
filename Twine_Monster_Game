@@ -1,1 +1,100 @@
+See: http://lambdamaphone.blogspot.com/2015/02/using-twine-for-games-research-part-ii.html
+
+
+## init
+(display: "main")
+
+(set: $hp to 10) 
+(set: $coins to 10) 
+(set: $days to 0)
+(set: $weapon to "dagger")
+
+
+
+## main
+You've been adventuring for $days days. You have $coins coins and your health is $hp. 
+[[rest]] 
+[[adventure->start adventure]] 
+[[shop]]
+
+
+
+## rest
+(set: $hp to 10) (set: $days to $days + 1) 
+You feel refreshed. 
+(display: "main")
+
+
+
+## start adventure
+(set: $spoils to 0) (set: $streak to 0) 
+(display: "adventure")
+
+
+
+## adventure
+A monster appears! (set: $monster_hp to 3) 
+[[fight]] 
+[[flee->main]]
+
+
+
+## fight
+(if: (either: 0, 1) is 0)[  
+  The monster bites you! 
+  (set: $hp to $hp - (either: 1,2,3))  
+  (if: $hp < 1)[ You are [[dead]]! ]  
+  (else:)[ Your health is $hp. 
+    [[fight]] 
+    [[flee|main]] ]  
+]
+(else:)[ You hit the monster!  
+  (if: $weapon is "dagger")[(set: $damage to 1)](else-if: $weapon is "small sword")[(set: $damage to 3)](else-if: $weapon is "big sword")[(set: $damage to 5)](set:$monster_hp = $monster_hp - $damage)
+  (if: $monster_hp < 1)[ The [[monster is dead]]! ]  
+  (else:)[    
+    Its health is $monster_hp.
+    [[fight]] 
+    [[flee|main]] ]  
+]
+
+
+
+## dead
+You are dead! [[restart?|init]]
+
+
+
+## monster is dead
+(set: $streak to $streak + 1) 
+(set: $drop to (random: 3,10) * $streak) 
+(set: $spoils to $spoils + $drop) 
+You collect $drop coins from the monster carcass!  Your spoils are currently $spoils coins and your health is $hp. You've killed $streak monster(if: not($streak is 1))[s] on this adventure.
+[[continue|adventure]] 
+[[go home|collect spoils]]
+
+
+
+## collect spoils
+(set: $coins to $coins + $spoils) 
+(display: "main")
+
+
+
+
+## shop
+Your current weapon is a $weapon.
+(if: $weapon is "dagger")[  [[buy small sword]] (30 coins, does 3 damage) ](if: $weapon is "small sword")[  [[buy big sword]] (50 coins, does 5 damage) ]
+[[go back home|main]]
+
+
+
+## buy small sword
+(if: $coins > 30)[  (set: $weapon to "small sword")  (set: $coins to $coins - 30)   (display: "shop")](else:)[You don't have enough money! 
+  (display: "shop")]
+  
+
+
+## buy big sword
+(if: $coins > 50)[  (set: $weapon to "big sword")  (set: $coins to $coins - 50)   (display: "shop")](else:)[You don't have enough money! 
+  (display: "shop")]
 
