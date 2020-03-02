@@ -17,7 +17,7 @@ CHANGE BACKGROUND COLOR
 (background: black)[
 
 INSERT IMAGE
-<img src="YOUR URL HERE">
+<img src="YOUR URL HERE" width="400" height="300">
 
 INSERT LINK TO A WEBSITE/PAGE
 <a href="YOUR URL HERE">YOUR TEXT HERE</a>
