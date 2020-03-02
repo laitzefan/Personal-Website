@@ -1,0 +1,21 @@
+** REMEMBER: AMERICAN SPELLING ONLY! **
+
+
+HARLOWE USER GUIDE
+https://twine2.neocities.org/
+
+CHANGE FONT COLOR
+<font color=RED>YOUR TEXT HERE</font>
+
+CHANGE FONT SIZE
+<font size=12>YOUR TEXT HERE</font>
+
+INSERT IMAGE
+<img src="YOUR URL HERE">
+
+INSERT LINK TO A WEBSITE/PAGE
+<a href="YOUR URL HERE">YOUR TEXT HERE</a>
+
+INSERT YOUTUBE VIDEO (change the width and height numbers to something that works for you)
+<iframe width="560" height="315" src="YOUR URL HERE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
