@@ -5,10 +5,16 @@ HARLOWE USER GUIDE
 https://twine2.neocities.org/
 
 CHANGE FONT COLOR
-<font color=RED>YOUR TEXT HERE</font>
+<font color=red>YOUR TEXT HERE</font>
 
 CHANGE FONT SIZE
 <font size=12>YOUR TEXT HERE</font>
+
+CHANGE FONT COLOR
+(text-color: red)[
+
+CHANGE BACKGROUND COLOR
+(background: black)[
 
 INSERT IMAGE
 <img src="YOUR URL HERE">
