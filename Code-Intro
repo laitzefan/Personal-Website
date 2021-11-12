@@ -21,6 +21,7 @@ CHANGE FONT FACE
 
 INSERT IMAGE
 <img src="YOUR URL HERE" width="400" height="300">
+- if you like the picture in its default size, just leave out the width and height
 
 
 INSERT LINK TO ANYTHING
@@ -33,6 +34,24 @@ INSERT VIDEO (change the width and height numbers to something that works for yo
 <iframe width="560" height="315" src="YOUR URL HERE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+CHEAT WAY TO CREATE SPACES: &nbsp;
+
+Between words: 
+&nbsp;&nbsp;&nbsp; - YOUR TEXT (looks like an indent/Tab)
+
+Between lines:
+TEXT TEXT
+&nbsp;
+&nbsp;
+&nbsp;
+TEXT TEXT (looks like you pressed Return a few times)
+
+
+CREATE A HORIZONTAL LINE ACROSS THE PAGE: <hr>
+
+
+
+# Other Stuff
 
 Example of a hex code website: https://htmlcolorcodes.com/
 
