@@ -1,27 +1,37 @@
 ** REMEMBER: AMERICAN SPELLING ONLY! **
 
 
-HARLOWE USER GUIDE
-https://twine2.neocities.org/
+BOLD, ITALICIZE, UNDERLINE
+<b><i><u>YOUR TEXT HERE</b></i></u>
+
 
 CHANGE FONT COLOR
 <font color=red>YOUR TEXT HERE</font>
 
+
 CHANGE FONT SIZE
 <font size=12>YOUR TEXT HERE</font>
 
-CHANGE FONT COLOR
-(text-color: red)[
 
-CHANGE BACKGROUND COLOR
-(background: black)[
+CHANGE FONT FACE
+<font face=verdana>YOUR TEXT HERE</font>
+
+^ or combine: <font size=12 face=verdana color=red>YOUR TEXT HERE</font>
+
 
 INSERT IMAGE
 <img src="YOUR URL HERE" width="400" height="300">
 
-INSERT LINK TO A WEBSITE/PAGE
+
+INSERT LINK TO ANYTHING
 <a href="YOUR URL HERE">YOUR TEXT HERE</a>
 
-INSERT YOUTUBE VIDEO (change the width and height numbers to something that works for you)
+
+INSERT VIDEO (change the width and height numbers to something that works for you)
+- get the Embed code from YouTube, Vimeo, etc.
+- OR:
 <iframe width="560" height="315" src="YOUR URL HERE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
+
+Example of a hex code website: https://htmlcolorcodes.com/
